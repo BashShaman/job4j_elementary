@@ -8,5 +8,17 @@ public class ArrayDefinition {
         System.out.printf("The size of the `surnames` array is %,d.\n", surnames.length);
         float[] prices = new float[40];
         System.out.printf("The size of the `prices` array is %d.\n", prices.length);
+
+        String[] names = new String[4];
+
+        names[0] = "Robert";
+        names[1] = "Bruce";
+        names[2] = "Tonny";
+        names[3] = "Andrew";
+
+        System.out.println(names[0]);
+        System.out.println(names[1]);
+        System.out.println(names[2]);
+        System.out.println(names[3]);
     }
 }

@@ -1,7 +1,7 @@
 package ru.job4j.array;
 
 public class EqLast {
-    public static int getLastItem(int[] array) {
+    private static int getLastItem(int[] array) {
         return array[array.length - 1];
     }
 

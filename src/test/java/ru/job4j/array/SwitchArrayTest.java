@@ -33,14 +33,4 @@ public class SwitchArrayTest {
         int[] expected = {1, 2, 6, 4, 5, 3, 7};
         Assert.assertArrayEquals(expected, result);
     }
-
-    @Test
-    public  void whenSwap10to900() {
-        int[] input = {1, 2, 3, 4, 5, 6, 7};
-        int source = 10;
-        int dest = 900;
-        int[] result = SwitchArray.swap(input, source, dest);
-        int[] expected = {1, 2, 3, 4, 5, 6, 7};
-        Assert.assertArrayEquals(expected, result);
-    }
 }

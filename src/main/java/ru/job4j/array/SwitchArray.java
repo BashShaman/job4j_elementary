@@ -9,16 +9,10 @@ public class SwitchArray {
         return array;
     }
 
-    private static boolean isValidIndex(int[] array, int index) {
-        return index > -1 && index < array.length;
-    }
-
     public static int[] swap(int[] array, int source, int dest) {
-        if (isValidIndex(array, source) && isValidIndex(array, dest)) {
-            int temp = array[source];
-            array[source] = array[dest];
-            array[dest] = temp;
-        }
+        int temp = array[source];
+        array[source] = array[dest];
+        array[dest] = temp;
         return array;
     }
 

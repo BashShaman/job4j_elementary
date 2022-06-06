@@ -41,4 +41,56 @@ public class MaxTest {
         int out = Max.max(left, right);
         assertEquals(expected, out);
     }
+
+    @Test
+    public void whenMax1To2To3Then3() {
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        int expected = 3;
+        int out = Max.max(a, b, c);
+        assertEquals(expected, out);
+    }
+
+    @Test
+    public void whenMax1To20To3Then20() {
+        int a = 1;
+        int b = 20;
+        int c = 3;
+        int expected = 20;
+        int out = Max.max(a, b, c);
+        assertEquals(expected, out);
+    }
+
+    @Test
+    public void whenMax10To2To3Then10() {
+        int a = 10;
+        int b = 2;
+        int c = 3;
+        int expected = 10;
+        int out = Max.max(a, b, c);
+        assertEquals(expected, out);
+    }
+
+    @Test
+    public void whenMax1To2To3To4Then4() {
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        int d = 4;
+        int expected = 4;
+        int out = Max.max(a, b, c, d);
+        assertEquals(expected, out);
+    }
+
+    @Test
+    public void whenMax10To2To3To4Then10() {
+        int a = 10;
+        int b = 2;
+        int c = 3;
+        int d = 4;
+        int expected = 10;
+        int out = Max.max(a, b, c, d);
+        assertEquals(expected, out);
+    }
 }

@@ -40,4 +40,22 @@ public class PointTest {
         double out = p0.distance(p1);
         assertEquals(expected, out, 0.01);
     }
+
+    @Test
+    public void whenX3Y3Z3ToX0Y0Z0Then5dot2() {
+        Point p0 = new Point(3, 3, 3);
+        Point p1 = new Point(0, 0, 0);
+        double expected = 5.2;
+        double out = p0.distance3d(p1);
+        assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void whenX10Y15Z20ToX5Y10Z15Then8dot66() {
+        Point p0 = new Point(10, 15, 20);
+        Point p1 = new Point(5, 10, 15);
+        double expected = 8.66;
+        double out = p0.distance3d(p1);
+        assertEquals(expected, out, 0.01);
+    }
 }

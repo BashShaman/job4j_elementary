@@ -1,34 +1,45 @@
 package ru.job4j.condition;
 
+import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
+
 public class Point {
-    public static double distance(int x1, int y1, int x2, int y2) {
-        return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+
+    private int x;
+    private int y;
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+
+    public double distance(Point that) {
+        return sqrt(pow(x - that.x, 2) + pow(y - that.y, 2));
     }
 
     public static void main(String[] args) {
-        int x1 = 0;
-        int y1 = 0;
-        int x2 = 2;
-        int y2 = 0;
-
-        double result = Point.distance(x1, y1, x2, y2);
+        Point p0 = new Point(0, 0);
+        Point p1 = new Point(2, 0);
+        double result = p0.distance(p1);
         System.out.printf("result (%d, %d) to (%d, %d) %.2f\n",
-                x1, y1, x2, y2, result);
-
-        x1 = 10;
-        y1 = 20;
-        x2 = -10;
-        y2 = -5;
-        result = Point.distance(x1, y1, x2, y2);
+                p0.getX(), p0.getY(), p1.getX(), p1.getY(), result);
+        Point p2 = new Point(10, 20);
+        Point p3 = new Point(-10, -5);
+        result = p2.distance(p3);
         System.out.printf("result (%d, %d) to (%d, %d) %.2f\n",
-                x1, y1, x2, y2, result);
-
-        x1 = 5;
-        y1 = 0;
-        x2 = -30;
-        y2 = -50;
-        result = Point.distance(x1, y1, x2, y2);
+                p2.getX(), p2.getY(), p3.getX(), p3.getY(), result);
+        Point p4 = new Point(5, 0);
+        Point p5 = new Point(-30, -50);
+        result = p4.distance(p5);
         System.out.printf("result (%d, %d) to (%d, %d) %.2f\n",
-                x1, y1, x2, y2, result);
+                p4.getX(), p4.getY(), p5.getX(), p5.getY(), result);
     }
 }
